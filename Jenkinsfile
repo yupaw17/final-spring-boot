@@ -28,7 +28,7 @@ pipeline {
                 sh """
                 ${MAVEN_HOME}/bin/mvn deploy \
                     -DskipTests \
-                    -DaltDeploymentRepository=maven-releases::default::http://nexus-service:8081/repository/maven-releases/ \
+                    -DaltDeploymentRepository=maven-releases::http://nexus-service:8081/repository/maven-releases/ \
                     -Dnexus.username=${NEXUS_CREDENTIALS_USR} \
                     -Dnexus.password=${NEXUS_CREDENTIALS_PSW}
                 """
